@@ -19,10 +19,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Sidebar />
-        <Navbar />
+        <div className="flex justify-between gap-5 ">
+          <div
+            className="h-screen w-1/5 min-w-fit	"
+            style={{ backgroundColor: "var(--bgSoft)" }}
+          >
+            <Sidebar />
+          </div>
 
-        {children}
+          <div className="w-full flex flex-col gap-5 mt-5 mr-5 ">
+            <Navbar />
+
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
