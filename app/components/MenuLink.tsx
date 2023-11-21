@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 interface Props {
   item: {
@@ -8,9 +11,12 @@ interface Props {
   };
 }
 const MenuLink = ({ item }: Props) => {
+  const pathName = usePathname();
+  const activeMenu = pathName === item.path ? "active" : "";
+
   return (
     <>
-      <Link href={item.path} className="active:bg-blue-600">
+      <Link href={item.path} className={activeMenu}>
         {item.icon}
         {item.title}
       </Link>
