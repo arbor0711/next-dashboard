@@ -10,6 +10,8 @@ interface Props {
     icon: React.JSX.Element;
   };
 }
+
+// usePathname hook from next
 const MenuLink = ({ item }: Props) => {
   const pathName = usePathname();
   const activeMenu = pathName === item.path ? "active" : "";

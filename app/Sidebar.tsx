@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import {
@@ -70,11 +71,6 @@ const Sidebar = () => {
           path: "/dashboard/help",
           icon: <MdHelpCenter />,
         },
-        {
-          title: "Logout",
-          path: "/dashboard/teams",
-          icon: <MdLogout />,
-        },
       ],
     },
   ];
@@ -106,6 +102,12 @@ const Sidebar = () => {
             ))}
           </ul>
         ))}
+        <li>
+          <button onClick={() => console.log("logout")}>
+            <MdLogout />
+            Logout
+          </button>
+        </li>
       </div>
     </>
   );
