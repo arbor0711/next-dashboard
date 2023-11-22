@@ -49,7 +49,7 @@ const data = [
 ];
 const Chart = () => {
   return (
-    <div className="h-80  -bg--bgSoft p-5 rounded-xl ">
+    <div className="h-80 ">
       <h2 className="-text--textSoft font-light mb-2">Weekly Recap</h2>
 
       <ResponsiveContainer width="100%" height="90%">

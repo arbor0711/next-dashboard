@@ -54,7 +54,7 @@ const Transactions = () => {
   ];
 
   return (
-    <div className="overflow-x-auto -bg--bgSoft p-5 rounded-xl h-80">
+    <div className="overflow-x-auto">
       <h2 className="-text--textSoft font-light mb-2">Latest Transactions</h2>
 
       <table className="table">

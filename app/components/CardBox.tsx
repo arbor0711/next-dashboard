@@ -3,7 +3,7 @@ import Card from "./Card";
 
 const CardBox = () => {
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2 w-full">
       <Card />
       <Card />
       <Card />
