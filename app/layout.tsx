@@ -20,10 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex justify-between gap-5 ">
-          <div
-            className="h-screen w-1/5 min-w-fit	"
-            style={{ backgroundColor: "var(--bgSoft)" }}
-          >
+          <div className="h-screen w-1/5 min-w-fit -bg--bgSoft	">
             <Sidebar />
           </div>
 

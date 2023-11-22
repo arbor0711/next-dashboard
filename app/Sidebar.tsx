@@ -79,11 +79,8 @@ const Sidebar = () => {
     <>
       <div className="flex gap-5 p-5 align-middle">
         <div className="avatar">
-          <div
-            className="w-16 mask mask-circle"
-            style={{ backgroundColor: "gray" }}
-          >
-            <img src="https://i.pravatar.cc/300" />
+          <div className="w-16 mask mask-circle">
+            <img src="https://i.pravatar.cc/300" alt="Avatar photo" />
           </div>
         </div>
         <div className="flex flex-col justify-center">

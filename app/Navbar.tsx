@@ -13,12 +13,9 @@ const Navbar = () => {
   const pathName = usePathname();
 
   return (
-    <div
-      className="navbar rounded-md"
-      style={{ backgroundColor: "var(--bgSoft)" }}
-    >
+    <div className="navbar rounded-md -bg--bgSoft">
       <div className="flex-1">
-        <h2 className="text-xl capitalize" style={{ color: "var(--textSoft)" }}>
+        <h2 className="text-xl capitalize -text--textSoft">
           {pathName.split("/").pop()}
         </h2>
       </div>
