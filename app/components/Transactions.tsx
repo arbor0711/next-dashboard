@@ -1,49 +1,55 @@
 import Image from "next/image";
 import React from "react";
-
+interface Transaction {
+  avatar: string;
+  name: string;
+  status: "Pending" | "Done" | "Canceled";
+  date: string;
+  amount: number;
+}
 const Transactions = () => {
-  const transactions = [
+  const transactions: Transaction[] = [
     {
       avatar: "https://i.pravatar.cc/300",
       name: "John Doe",
-      status: "pending",
+      status: "Pending",
       date: "21.12.2023",
-      amount: "$1504",
+      amount: 1504,
     },
     {
       avatar: "https://i.pravatar.cc/300",
       name: "John Doe",
       status: "Done",
       date: "21.12.2023",
-      amount: "$1504",
+      amount: 234,
     },
     {
       avatar: "https://i.pravatar.cc/300",
       name: "John Doe",
       status: "Done",
       date: "21.12.2023",
-      amount: "$1504",
+      amount: 9846,
     },
     {
       avatar: "https://i.pravatar.cc/300",
       name: "John Doe",
-      status: "pending",
+      status: "Pending",
       date: "21.12.2023",
-      amount: "$1504",
+      amount: 1025,
     },
     {
       avatar: "https://i.pravatar.cc/300",
       name: "John Doe",
       status: "Canceled",
       date: "21.12.2023",
-      amount: "$1504",
+      amount: 547,
     },
     {
       avatar: "https://i.pravatar.cc/300",
       name: "John Doe",
-      status: "pending",
+      status: "Pending",
       date: "21.12.2023",
-      amount: "$1504",
+      amount: 620,
     },
   ];
 
@@ -81,9 +87,9 @@ const Transactions = () => {
               <td>
                 <div
                   className={`badge ${
-                    transaction.status == "canceled"
+                    transaction.status == "Canceled"
                       ? "badge-error"
-                      : transaction.status == "done"
+                      : transaction.status == "Done"
                       ? "badge-success"
                       : "badge-warning"
                   }`}
@@ -92,7 +98,7 @@ const Transactions = () => {
                 </div>
               </td>
               <td>{transaction.date}</td>
-              <td>{transaction.amount}</td>
+              <td>${transaction.amount}</td>
             </tr>
           ))}
         </tbody>
