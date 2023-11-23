@@ -1,4 +1,5 @@
 import ContentBox from "@/app/components/ContentBox";
+import Pagination from "@/app/components/Pagination";
 import Image from "next/image";
 import React from "react";
 import { MdSearch } from "react-icons/md";
@@ -61,7 +62,7 @@ const Users = () => {
           <button className="btn btn-primary">Add New</button>
         </div>
 
-        <div>
+        <div className="w-3/4">
           <table className="table">
             <thead>
               <tr>
@@ -98,10 +99,10 @@ const Users = () => {
                   <td>{user.role}</td>
                   <td>${user.action}</td>
                   <td>
-                    <button className="btn btn-info">View</button>
+                    <button className="btn btn-primary">View</button>
                   </td>
                   <td>
-                    <button className="btn btn-warning">Delete</button>
+                    <button className="btn btn-error">Delete</button>
                   </td>
                 </tr>
               ))}
@@ -109,12 +110,7 @@ const Users = () => {
           </table>
         </div>
 
-        <div className="flex justify-between">
-          <button className="btn btn-outline opacity-50 cursor-not-allowed">
-            Previous
-          </button>
-          <button className="btn btn-outline ">Next</button>
-        </div>
+        <Pagination />
       </div>
     </ContentBox>
   );
