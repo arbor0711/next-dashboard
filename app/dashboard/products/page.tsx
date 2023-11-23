@@ -90,8 +90,8 @@ const Products = () => {
                   <td>
                     <div>{product.description}</div>
                   </td>
-                  <td>{product.price}</td>
-                  <td>${product.createdAt}</td>
+                  <td>${product.price}</td>
+                  <td>{product.createdAt}</td>
                   <td>{product.stock}</td>
                   <td>
                     <Link href="/">
