@@ -7,7 +7,7 @@ import Transactions from "../components/Transactions";
 const Dashboard = () => {
   return (
     <div className="flex gap-5 justify-between">
-      <div className="flex w-full  flex-col  gap-5 ">
+      <div className="flex flex-1  flex-col  gap-5 ">
         <CardBox />
 
         <ContentBox>
@@ -19,7 +19,7 @@ const Dashboard = () => {
         </ContentBox>
       </div>
 
-      <div className="w-70">
+      <div className="flex-initial" style={{ width: "370px" }}>
         <Rightbar />
       </div>
     </div>

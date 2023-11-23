@@ -19,6 +19,7 @@ const config: Config = {
         "--bgSoft": "#182237",
         "--text": "#fff",
         "--textSoft": "#b7bac1",
+        "--bgGradient": "#253352",
       },
     },
   },
