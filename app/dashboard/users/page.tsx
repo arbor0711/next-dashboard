@@ -2,15 +2,15 @@ import ContentBox from "@/app/components/ContentBox";
 import Pagination from "@/app/components/Pagination";
 import Search from "@/app/components/Search";
 import Image from "next/image";
-import React from "react";
-import { MdSearch } from "react-icons/md";
+import Link from "next/link";
 
 interface User {
   avatar: string;
   name: string;
   email: string;
+  createdAt: string;
   role: "client" | "admin";
-  action: "passive" | "active";
+  status: "passive" | "active";
 }
 
 const Users = () => {
@@ -19,29 +19,33 @@ const Users = () => {
       avatar: "https://i.pravatar.cc/300",
       name: "John Doe",
       email: "user@MdEmail.com",
+      createdAt: "02.12.2023",
       role: "client",
-      action: "passive",
+      status: "passive",
     },
     {
       avatar: "https://i.pravatar.cc/300",
       name: "John Amo",
       email: "user@MdEmail.com",
+      createdAt: "02.12.2023",
       role: "client",
-      action: "active",
+      status: "active",
     },
     {
       avatar: "https://i.pravatar.cc/300",
       name: "John Ame",
       email: "user@MdEmail.com",
+      createdAt: "02.12.2023",
       role: "client",
-      action: "passive",
+      status: "passive",
     },
     {
       avatar: "https://i.pravatar.cc/300",
       name: "John Xale",
       email: "user@MdEmail.com",
+      createdAt: "02.12.2023",
       role: "admin",
-      action: "active",
+      status: "active",
     },
   ];
   return (
@@ -60,8 +64,8 @@ const Users = () => {
                 <th>Email</th>
                 <th>Created at</th>
                 <th>role</th>
+                <th>Status</th>
                 <th>Action</th>
-                <th></th>
                 <th></th>
               </tr>
             </thead>
@@ -86,10 +90,13 @@ const Users = () => {
                   <td>
                     <div>{user.email}</div>
                   </td>
+                  <td>{user.createdAt}</td>
                   <td>{user.role}</td>
-                  <td>${user.action}</td>
+                  <td>{user.status}</td>
                   <td>
-                    <button className="btn btn-primary">View</button>
+                    <Link href="/">
+                      <button className="btn btn-primary">View</button>
+                    </Link>
                   </td>
                   <td>
                     <button className="btn btn-error">Delete</button>
