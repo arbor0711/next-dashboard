@@ -23,7 +23,7 @@ const Sidebar = () => {
         { title: "Dashboard", path: "/dashboard", icon: <MdDashboard /> },
         {
           title: "Users",
-          path: "/dashboard/user",
+          path: "/dashboard/users",
           icon: <MdSupervisedUserCircle />,
         },
         {
