@@ -8,6 +8,7 @@ import {
   MdPublic,
   MdSearch,
 } from "react-icons/md";
+import Search from "./components/Search";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -21,18 +22,7 @@ const Navbar = () => {
       </div>
 
       <div className="flex-none gap-2">
-        <div className="flex justify-center align-middle gap-2 input input-bordered">
-          <div className="my-auto">
-            <MdSearch />
-          </div>
-          <div className="form-control flex my-auto">
-            <input
-              type="text"
-              placeholder="Search"
-              className="bg-inherit w-24 md:w-auto"
-            />
-          </div>
-        </div>
+        <Search />
 
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle">

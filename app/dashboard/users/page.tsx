@@ -1,5 +1,6 @@
 import ContentBox from "@/app/components/ContentBox";
 import Pagination from "@/app/components/Pagination";
+import Search from "@/app/components/Search";
 import Image from "next/image";
 import React from "react";
 import { MdSearch } from "react-icons/md";
@@ -47,18 +48,7 @@ const Users = () => {
     <ContentBox>
       <div>
         <div className="flex justify-between mb-5">
-          <div className="flex justify-center align-middle gap-2 input input-bordered">
-            <div className="my-auto">
-              <MdSearch />
-            </div>
-            <div className="form-control flex my-auto">
-              <input
-                type="text"
-                placeholder="Search"
-                className="bg-inherit w-24 md:w-auto"
-              />
-            </div>
-          </div>
+          <Search />
           <button className="btn btn-primary">Add New</button>
         </div>
 
