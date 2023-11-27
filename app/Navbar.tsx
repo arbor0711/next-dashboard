@@ -12,12 +12,17 @@ import Search from "./components/Search";
 
 const Navbar = () => {
   const pathName = usePathname();
+  const location = pathName.split("/").pop();
 
   return (
     <div className="navbar rounded-md -bg--bgSoft">
       <div className="flex-1">
         <h2 className="text-xl capitalize -text--textSoft">
-          {pathName.split("/").pop()}
+          {location === "newuser"
+            ? "New User"
+            : location === "newproduct"
+            ? "New Product"
+            : location}
         </h2>
       </div>
 

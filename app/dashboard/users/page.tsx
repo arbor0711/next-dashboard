@@ -53,7 +53,9 @@ const Users = () => {
       <div>
         <div className="flex justify-between mb-5">
           <Search />
-          <button className="btn btn-primary">Add New</button>
+          <Link href="/dashboard/users/newuser">
+            <button className="btn btn-primary">Add New</button>
+          </Link>
         </div>
 
         <div className="w-3/4">

@@ -53,7 +53,9 @@ const Products = () => {
       <div>
         <div className="flex justify-between mb-5">
           <Search />
-          <button className="btn btn-primary">Add New</button>
+          <Link href="/dashboard/products/newproduct">
+            <button className="btn btn-primary">Add New</button>
+          </Link>
         </div>
 
         <div className="w-3/4">
@@ -75,13 +77,13 @@ const Products = () => {
                 <tr key={index}>
                   <td>
                     <div className="flex align-middle justify-start gap-2">
-                      <div>
+                      <div className="w-6 h-6">
                         <Image
                           className="rounded-full"
                           src={product.avatar}
                           alt="product avatar"
-                          width={24}
-                          height={24}
+                          width={300}
+                          height={300}
                         />
                       </div>
                       <div>{product.title}</div>
