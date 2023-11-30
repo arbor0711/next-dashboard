@@ -66,7 +66,7 @@ const AddProducts = () => {
             className="textarea textarea-bordered w-11/12"
             name="description"
             id="description"
-            rows="10"
+            rows={10}
             placeholder="Description"
           ></textarea>
         </div>
