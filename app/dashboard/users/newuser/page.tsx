@@ -47,10 +47,10 @@ const AddUser = () => {
             <option value="DEFAULT" disabled>
               Is Admin?
             </option>
-            <option value={true} key="yes">
+            <option value="admin" key="yes">
               Yes
             </option>
-            <option value={false} key="no">
+            <option value="client" key="no">
               No
             </option>
           </select>
@@ -64,10 +64,10 @@ const AddUser = () => {
             <option value="DEFAULT" disabled>
               Is Active?
             </option>
-            <option value={true} key="yes">
+            <option value="admin" key="yes">
               Yes
             </option>
-            <option value={false} key="no">
+            <option value="client" key="no">
               No
             </option>
           </select>
@@ -76,7 +76,7 @@ const AddUser = () => {
             className="textarea textarea-bordered w-11/12"
             name="address"
             id="address"
-            rows="10"
+            rows={10}
             placeholder="Address"
           ></textarea>
         </div>
