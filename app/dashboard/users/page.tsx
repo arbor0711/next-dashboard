@@ -96,7 +96,7 @@ const Users = () => {
                   <td>{user.role}</td>
                   <td>{user.status}</td>
                   <td>
-                    <Link href="/">
+                    <Link href="/dashboard/users/test">
                       <button className="btn btn-primary">View</button>
                     </Link>
                   </td>

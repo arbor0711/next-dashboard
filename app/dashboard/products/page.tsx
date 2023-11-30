@@ -96,7 +96,7 @@ const Products = () => {
                   <td>{product.createdAt}</td>
                   <td>{product.stock}</td>
                   <td>
-                    <Link href="/">
+                    <Link href="/dashboard/products/test">
                       <button className="btn btn-primary">View</button>
                     </Link>
                   </td>

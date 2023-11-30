@@ -10,6 +10,12 @@ module.exports = {
         port: "",
         pathname: "/300",
       },
+      {
+        protocol: "https",
+        hostname: "i.pravatar.cc",
+        port: "",
+        pathname: "/600",
+      },
     ],
   },
 };
