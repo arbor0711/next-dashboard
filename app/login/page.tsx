@@ -7,7 +7,7 @@ const LoginPage = () => {
       <div className=" w-96 h-fit">
         <ContentBox>
           <form className="form-control">
-            <h1 className="text-2xl font-bold my-7 text-center">Login</h1>
+            <h1 className="text-xl font-bold my-7 text-center">Login</h1>
             <label>Username</label>
             <input
               className="input input-bordered mb-5 mt-2"
