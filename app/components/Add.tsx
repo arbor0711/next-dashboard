@@ -16,7 +16,7 @@ const Add = () => {
             required
           />
           <select className="select select-bordered w-5/12" name="cat" id="cat">
-            <option disabled defaultValue key="general">
+            <option disabled defaultChecked key="general">
               Pick a category
             </option>
             <option value="phone" key="phone">
