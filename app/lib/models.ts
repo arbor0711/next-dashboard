@@ -1,6 +1,11 @@
+// External dependencies
+import { ObjectId } from "mongodb";
+// Class Implementation
+
 import mongoose, { Schema } from "mongoose";
 
 interface IUser {
+  id?: ObjectId;
   username: string;
   email: string;
   password: string;
@@ -12,6 +17,7 @@ interface IUser {
 }
 
 interface IProduct {
+  id?: ObjectId;
   title: string;
   description: string;
   price: number;

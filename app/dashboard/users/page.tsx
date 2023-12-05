@@ -1,53 +1,14 @@
 import ContentBox from "@/app/components/ContentBox";
 import Pagination from "@/app/components/Pagination";
 import Search from "@/app/components/Search";
+import { fetchUsers } from "@/app/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 
-interface User {
-  avatar: string;
-  name: string;
-  email: string;
-  createdAt: string;
-  role: "client" | "admin";
-  status: "passive" | "active";
-}
+const UserPage = async () => {
+  const users = await fetchUsers();
+  console.log(users);
 
-const Users = () => {
-  const usersList: User[] = [
-    {
-      avatar: "https://i.pravatar.cc/300",
-      name: "John Doe",
-      email: "user@MdEmail.com",
-      createdAt: "02.12.2023",
-      role: "client",
-      status: "passive",
-    },
-    {
-      avatar: "https://i.pravatar.cc/300",
-      name: "John Amo",
-      email: "user@MdEmail.com",
-      createdAt: "02.12.2023",
-      role: "client",
-      status: "active",
-    },
-    {
-      avatar: "https://i.pravatar.cc/300",
-      name: "John Ame",
-      email: "user@MdEmail.com",
-      createdAt: "02.12.2023",
-      role: "client",
-      status: "passive",
-    },
-    {
-      avatar: "https://i.pravatar.cc/300",
-      name: "John Xale",
-      email: "user@MdEmail.com",
-      createdAt: "02.12.2023",
-      role: "admin",
-      status: "active",
-    },
-  ];
   return (
     <ContentBox>
       <div>
@@ -73,7 +34,7 @@ const Users = () => {
             </thead>
 
             <tbody>
-              {usersList.map((user, index) => (
+              {users.map((user, index) => (
                 <tr key={index}>
                   <td>
                     <div className="flex align-middle justify-start gap-2">
@@ -115,4 +76,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default UserPage;

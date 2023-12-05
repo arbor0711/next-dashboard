@@ -1,16 +1,26 @@
 import mongoose from "mongoose";
-const { connection, connect } = mongoose;
-
-export const connectToDB = async () => {
+const { connection } = mongoose;
+const connectToDB = async () => {
   try {
     if (connection.readyState === 1) return;
-    const db = await connect(process.env.MONGO); //This line show error:
-    //   Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
-    // Type 'undefined' is not assignable to type 'string'.
-    // I add environment.d.ts file and the error solved.
+    const db = await mongoose.connect(
+      "mongodb+srv://arbor0711:123!@#qwe@cluster1.alhxoig.mongodb.net/dashboard?retryWrites=true&w=majority"
+    );
 
-    // ******** IN MEANWHILE I installed types/node => npm i @types/node
+    console.log("Mongo connection was successful");
   } catch (error) {
-    throw new Error(`${error}`);
+    throw new Error("Mongo connection failed -" + error);
   }
 };
+
+export default connectToDB;
+
+// const mongoose = require("mongoose");
+// mongoose.connect(
+//   "mongodb+srv://arbor0711:123!@#qwe@cluster1.alhxoig.mongodb.net/dashboard?retryWrites=true&w=majority"
+// );
+// const db = mongoose.connection;
+// db.on("error", console.error.bind(console, "connection error"));
+// db.once("open", () => {
+//   console.log("connection open");
+// });
